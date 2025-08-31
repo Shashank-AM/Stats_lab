@@ -13,11 +13,11 @@ data = read.csv("pricequotes.csv")
 data
 print(summary(data))
 
-n_barry <- length(data$Barry.Price)
-n_mary <- length(data$Mary.Price)
+n_barry <- length(data$Barry_Price)
+n_mary <- length(data$Mary_Price)
 
-sd_barry <- sd(data$Barry.Price)
-sd_mary <- sd(data$Mary.Price)
+sd_barry <- sd(data$Barry_Price)
+sd_mary <- sd(data$Mary_Price)
 
 se_barry <- sd_barry/sqrt(n_barry)
 se_mary <- sd_mary/sqrt(n_mary)
@@ -25,7 +25,7 @@ se_mary <- sd_mary/sqrt(n_mary)
 cat("Mary: SD=",round(sd_mary,2)," | SE = ",round(se_mary,2))
 cat("Barry: SD=",round(sd_barry,2)," | SE = ",round(se_barry,2))
 
-ggplot(data,aes(x="Barry",y=Barry.Price))+
+ggplot(data,aes(x="Barry",y=Barry_Price))+
     geom_boxplot(fill="skyblue")+
-    geom_boxplot(aes(x="Mary",y=Mary.Price),fill="lightgreen")+
+    geom_boxplot(aes(x="Mary",y=Mary_Price),fill="lightgreen")+
     labs(title="BoxPlot of Price QUotes",x="Person",y="Price")
