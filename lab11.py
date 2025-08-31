@@ -1,3 +1,7 @@
+# Consider the Australian Drug Sales dataset and develop a Python code to perform Time 
+# Series Analysis and visualize using plots.
+
+# pip install pandas matplotlib statsmodels
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
@@ -22,5 +26,5 @@ plt.plot(forecast.index, forecast,label='Forecast',color='green')
 plt.legend()
 plt.title("Monthly Drug Sales in Australia")
 plt.xlabel("Date")
-plt.ylabel("Sales")
+plt.ylabel(   "Sales")
 plt.show()

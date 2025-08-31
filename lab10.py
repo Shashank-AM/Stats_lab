@@ -1,3 +1,11 @@
+# Develop a Python code to build a simple Linear Regression model to predict sales units 
+# based on the advertising budget spent on TV. Display the statistical summary of the 
+# model. 
+# 3 
+#  Sales 2 4 6 9 12 34 45  
+# TV 1 2 4 7 9 11 15
+
+# pip install pandas statsmodels matplotlib
 import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
