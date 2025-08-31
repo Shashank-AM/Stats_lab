@@ -2,12 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
-df = pd.read_csv("AustraliaDrugSales.csv",parse_dates=['date'])
-df.set_index('date', inplace=True)
+df = pd.read_csv("AusAntidiabeticDrug.csv",parse_dates=['ds'])
+df.set_index('ds', inplace=True)
 df.index.freq = 'MS'
 
 model = ExponentialSmoothing(
-    df['value'],
+    df['y'],
     trend='add',
     seasonal='add',
     seasonal_periods=12
@@ -16,7 +16,7 @@ model = ExponentialSmoothing(
 # print(model.summary())
 forecast = model.forecast(24)
 
-plt.plot(df.index,df['value'],label='Observerd',color='blue')
+plt.plot(df.index, df['y'], label='Observed', color='blue')
 plt.plot(model.fittedvalues.index, model.fittedvalues, label='Fitted', color='red')
 plt.plot(forecast.index, forecast,label='Forecast',color='green')
 plt.legend()

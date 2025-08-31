@@ -13,6 +13,7 @@ data
 
 summary(data$Amount)
 
+library(dplyr)
 library(ggplot2)
 
 ggplot(data,aes(x=log10(Amount)))+
