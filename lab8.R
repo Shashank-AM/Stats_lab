@@ -26,10 +26,14 @@ cor_matrix <- cor(fitness_cont)
 print(cor_matrix)
 
 cor_values <- cor_matrix[upper.tri(cor_matrix)]
-max_cor <- max(cor_values)
-min_cor <- min(cor_values)
 
+max_cor <- max(cor_values)
+cat("highest correlation : ",max_cor)
 which(cor_matrix == max_cor, arr.ind = TRUE)
+
+
+min_cor <- min(cor_values)
+cat("lowest correlation : ",min_cor)
 which(cor_matrix == min_cor, arr.ind = TRUE)
 
 
