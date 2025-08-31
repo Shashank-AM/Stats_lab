@@ -10,4 +10,4 @@ data
 
 t.test(data$Price1970,data$Price1980,paired=TRUE)
 
-mean(data$Price1980 - data$Price1980)
+mean(data$Price1980 - data$Price1970)
