@@ -1,3 +1,13 @@
+# Consider the Medical Malpractice dataset and perform the following using the JMP Pro 
+# tool. 
+ 
+# 1. Using descriptive statistics and graphical displays, explore claim payment 
+# amounts, and identify factors that appear to influence the amount of the payment. 
+# 2. Use the data set to answer the following questions: 
+# What percentage of the sample involved Anesthesiologists? Dermatologists? 
+# Orthopedic surgeons? 
+# Is there any relationship between age of the patient and size of the payment? 
+
 data <- read.csv('medicalmalpractice.csv')
 data
 
@@ -36,5 +46,24 @@ spec_percent <- data %>%
 spec_percent
 
 cor.test(data$Age,data$Amount)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

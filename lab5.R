@@ -1,3 +1,13 @@
+# Consider the Baggage complaints dataset and perform the following using the JMP Pro 
+# tool. 
+
+# 1. Generate the Summary statistics and interpret the results. 
+# 2. Compare the baggage complaints for three airlines: American Eagle, Hawaiian, 
+# and United. Which airline has the best record? The worst? Are complaints getting better 
+# or worse over time? Are there other factors, such as destinations, seasonal effects or 
+# the volume of travelers that affect baggage performance?
+
+
 df <- read.csv("baggagecomplaints.csv")
 df <- df %>%
   mutate(Rate = 100 * Baggage/Enplaned )

@@ -1,3 +1,6 @@
+# Apply the Pearson correlation test on a dataset, show the normality of variables using 
+# Q-Q plot and interpret the results using JMP Pro Tool. 
+
 data()
 mtcars
 
@@ -12,4 +15,3 @@ ggplot(data=mtcars,aes(sample=mpg))+
        x = "THeoretical Quantiles",
        y = "MPG (sample)")+
   theme_minimal()
-
